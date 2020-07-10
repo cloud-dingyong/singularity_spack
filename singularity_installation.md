@@ -32,7 +32,9 @@ $ echo 'export GOPATH=${HOME}/go' >> ~/.bashrc && \
 _**NOTE:** 如果你想从老版本更新GO，须先删除 `/usr/local/go` 文件夹，再重新安装。
 
 _**Problem:** 如果我安装的是最新版本的Go(GO1.14.4),后面的到 "编译 Singularity"这个阶段执行命令'make'时会报错："dial tcp 34.64.4.113:443: i/o timeout".
+
 _**Cause:**  因为Go 1.14设置默认GOSUMDB=sum.golang.org，而这个网站被墙了 
+
 _**Solution:** 1.[cdsn解决方案](https://blog.csdn.net/hhyukJae/article/details/106980818)   --未能成功
                2.尝试虚拟机跟宿主机共享 VPN    --（尝试了，未能成功）
                3.将go版本降低至GO1.13.2 ，成功解决
@@ -42,7 +44,6 @@ _**Solution:** 1.[cdsn解决方案](https://blog.csdn.net/hhyukJae/article/detai
 
 建议安装，官方的意思是：为了确保一致性并尽早捕获某些类型的问题，golangci-lint提供了一个配置文件。
 每个pull request都必须通过那里指定的检查，这些检查将在尝试合并代码之前自动运行。
-In order to install golangci-lint, you can run:
 
 ```
 $ curl -sfL https://install.goreleaser.com/github.com/golangci/golangci-lint.sh |
@@ -65,7 +66,9 @@ $ mkdir -p ${GOPATH}/src/github.com/sylabs && \
 $ git checkout v3.5.2
 ```
 _**Problem:** 官方的引导命令是'git checkout v3.6.0',但是会报错
+
 _**Cause:**  unknow
+
 _**Solution:**  更改为'git checkout v3.5.2'
 
 
