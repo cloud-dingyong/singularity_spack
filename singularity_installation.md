@@ -3,7 +3,7 @@
 
 For convenience, I documented my installation process including problems encountered and solutions
 
-## Install system dependencies
+## 1.安装系统依赖
 
 ```
 $ sudo apt-get update && \
@@ -11,7 +11,7 @@ $ sudo apt-get update && \
   libseccomp-dev pkg-config squashfs-tools cryptsetup
 ```
 
-## 安装 Golang
+## 2.安装 Golang
 
 首先下载golang安装包到 `/tmp`, 然后解压至 `/usr/local`.
 
@@ -36,11 +36,13 @@ _**Problem:** 如果我安装的是最新版本的Go(GO1.14.4),后面的到 "编
 _**Cause:**  因为Go 1.14设置默认GOSUMDB=sum.golang.org，而这个网站被墙了 
 
 _**Solution:** 1.[cdsn解决方案](https://blog.csdn.net/hhyukJae/article/details/106980818)   --未能成功
+
                2.尝试虚拟机跟宿主机共享 VPN    --（尝试了，未能成功）
+               
                3.将go版本降低至GO1.13.2 ，成功解决
 
 
-## 安装 golangci-lint
+## 3.安装 golangci-lint
 
 建议安装，官方的意思是：为了确保一致性并尽早捕获某些类型的问题，golangci-lint提供了一个配置文件。
 每个pull request都必须通过那里指定的检查，这些检查将在尝试合并代码之前自动运行。
@@ -51,7 +53,7 @@ $ curl -sfL https://install.goreleaser.com/github.com/golangci/golangci-lint.sh 
 ```
 
 
-## 下载git项目
+## 4.下载git项目
 
 ```
 $ mkdir -p ${GOPATH}/src/github.com/sylabs && \
@@ -72,7 +74,7 @@ _**Cause:**  unknow
 _**Solution:**  更改为'git checkout v3.5.2'
 
 
-## 编译 Singularity
+## 5.编译 Singularity
 
 ```
 $ cd ${GOPATH}/src/github.com/sylabs/singularity && \
