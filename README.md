@@ -3,16 +3,18 @@ spack 自动化部署singularity镜像
 
 # 1.生成spack基容器 
  
-'''
+```
 sudo singularity build basespack.sif basespack.def
-'''
+```
+
 **NOTE:** 通过镜像定义文件创建singularity镜像。
 
 # 2.展示可以安装的软件包list
 
-'''
+```
 spack list
-'''
+```
+
 >>>>>>> 目前进度：
 
 1.*问题：* 在用'spack install 软件包名' 出现编译器Bug  *方法：* 在新系统上重新安装singularity镜像及spack *原因：* 环境版本的原因
