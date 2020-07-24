@@ -15,7 +15,6 @@ $ sudo singularity build basespack.sif basespack.def
 $ spack list
 ```
 
-_** 目前进度：**
 
 1.*问题(已解决)：* 在用'spack install 软件包名' 出现编译器Bug 
 
@@ -42,17 +41,19 @@ _** 目前进度：**
 $ spack arch
 ```
 
-_** 目前进度：**
 
-3.*问题(未解决)：* 用'spack arch ' 结果显示为 'linux-centos7-sandybridge' 
+3.*问题(已解决)：* 用'spack arch ' 结果显示为 'linux-centos7-sandybridge' 
 
 *方法：* 修改定义文件 
 
 *原因（猜测）：* 使用镜像定义文件创建的基容器时，已经设定架构，如：'From:centos:7 '导致无法再为容器选择架构
 
+*方法-- 2：* 提前写好各架构的定义文件，在前端选择时分别对应不同的架构文件。
+
+
 3.1 .*问题(未解决)：* 当修改定义文件关于架构语句'From:centos:7 '时，若删除改行或修改为'From:  '，则报错'invalid image source: invalid reference format'
 
-*方法：* 探索ing
+*方法：* 
 
 *原因（猜测）：* 
 
@@ -61,7 +62,8 @@ _** 目前进度：**
 
 **思路:** spack的用户手册正在学习
 
-
+_** 目前进度：**
+学习如何用bosstrap开发前端网页........
 
 
 ## 5.通过点击生成命令，完成软件包的安装，容器镜像的生成
