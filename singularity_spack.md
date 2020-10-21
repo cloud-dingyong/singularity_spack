@@ -17,34 +17,34 @@ $ API_URL:'"http://authdemo.cloud.hdu.edu.cn"'
 ```
 
 
-    2.3 修改application.properties中Mysql数据库接口
+2.3 修改application.properties中Mysql数据库接口
 
 
 
-    2.4 修改UserController中的相应运行路径
+2.4 修改UserController中的相应运行路径
 
 
 
-    **2.5 UserController中脚本语句**
+**2.5 UserController中脚本语句**
 
-         2.5.1 生成spack基容器 
+2.5.1 生成spack基容器 
 
-        ```
-        $ sudo singularity  build --sandbox test/  basespack.def 
-        ```
+```
+$ sudo singularity  build --sandbox test/  basespack.def 
+```
 
-        **NOTE:** 通过镜像定义文件创建可修改的singularity沙盒镜像test。
+**NOTE:** 通过镜像定义文件创建可修改的singularity沙盒镜像test。
 
-         2.5.2 以root权限在该镜像内安装相应软件包
+2.5.2 以root权限在该镜像内安装相应软件包
 
-        ```
-        $ sudo singularity exec --writable test/ spack install zip
-        ```
+```
+$ sudo singularity exec --writable test/ spack install zip
+```
 
-        2.5.3 将沙盒镜像转化为img格式
+2.5.3 将沙盒镜像转化为img格式
 
-        ```
-        $ sudo  singularity build test.img  test/  
-        ```
+```
+$ sudo  singularity build test.img  test/  
+```
      
 ## 3.运行项目
