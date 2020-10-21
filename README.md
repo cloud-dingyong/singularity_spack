@@ -21,7 +21,7 @@ $ API_URL:'"http://authdemo.cloud.hdu.edu.cn"'
 
 
 
-**2.4 UserController中脚本语句**
+2.4 UserController中脚本语句--注释
 
 生成spack基容器 
 
