@@ -22,6 +22,7 @@ $ API_URL:'"http://authdemo.cloud.hdu.edu.cn"'
 
 
 **2.4 UserController中脚本语句**
+
 生成spack基容器 
 
 ```
@@ -44,3 +45,6 @@ $ sudo  singularity build test.img  test/
 ```
      
 ## 3.运行项目
+```
+$ ./vue-elementui/elementui-demo/run.sh
+```
