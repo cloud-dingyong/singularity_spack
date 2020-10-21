@@ -7,14 +7,14 @@ spack 自动化部署singularity镜像
 ## 2.部署网页的前后端
 
 
-    *2.1 下载并解压[elementui.tar.gz]文件，并安装相应依赖
+2.1 下载并解压[elementui.tar.gz]文件，并安装相应依赖
 
 
 
-    2.2 修改前端dev.env.js中相应的接口
-   ```
-   $ API_URL:'"http://authdemo.cloud.hdu.edu.cn"' 
-   ```
+ 2.2 修改前端dev.env.js中相应的接口
+```
+$ API_URL:'"http://authdemo.cloud.hdu.edu.cn"' 
+```
 
 
     2.3 修改application.properties中Mysql数据库接口
