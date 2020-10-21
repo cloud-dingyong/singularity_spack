@@ -1,5 +1,4 @@
-# singularity_spack
-spack 自动化部署singularity镜像
+
 
 ## 1.生成spack基容器 
  
